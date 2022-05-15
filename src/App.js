@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import Header from './components/Header/Header';
 import Corusal from './components/Corusal/Corusal';
 import ProductCard from './components/ProductCard/productCard';
+import {Rate} from 'rsuite';
 
 const products = [
   {name: 'Apple', price: 1, image: 'https://picsum.photos/300/200',category: 'Fruits & Vegetables'},
@@ -196,6 +197,10 @@ function App() {
                         <label>Message</label>
                         <textarea className='form-control' placeholder='Enter Message' value={message} onChange={(e)=>{setMessage(e.target.value)}}></textarea>
                       </div>
+                      <div className='form-group'>
+                        <label>Ratings</label><br/>
+                        <Rate defaultValue={0} />
+                      </div>
                       <div className='d-flex flex-wrap justify-content-center mt-3'>
                         <button className='btn btn-primary' onClick={()=>{}}>Submit</button>
                       </div>
@@ -205,7 +210,16 @@ function App() {
               </div>
             </div>
           </div>
+
+          
         </div>
+        {/*footer  */}
+        <footer class="text-center text-lg-start bg-light text-muted">
+        <div class="text-center p-4" >
+        Copyright © 2021-2023 Supermarket Grocery Supplies Pvt Ltd
+          
+        </div>
+        </footer>
     </div>
   );
 }
